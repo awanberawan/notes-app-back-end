@@ -3,13 +3,19 @@
 // import { push, filter } from './notes';
 // const { nanoid } = require('nanoid');
 // const notes = require('./notes');
-const {nanoid} = require('nanoid');
+// const { nanoid } = require('nanoid');
+// var { nanoid } = require("nanoid");
+const { nanoid } = require("nanoid");
 const notes = require('./notes');
+
 
 const addNoteHandler = (request, h) => {
     const { title, tags, body } = request.payload;
 
-    const id = nanoid(16);
+    // const id = nanoid(16);
+var id = "nanoid(6)";
+// var id = getRandomInt();
+    // const id = nanoid();
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
 
